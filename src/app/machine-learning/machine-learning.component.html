@@ -1,0 +1,42 @@
+<div class="content-wrapper">
+
+
+<div class="card card-primary">
+    <div class="card-header">
+      <h3 class="card-title">Machine Learning</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+      <div class="card-body">
+        
+     
+      
+          
+          <div class="form-group">
+              <label for="file">File</label>
+              <input 
+                  formControlName="file"
+                  id="file" 
+                  type="file" 
+                  class="form-control"
+                  (change)="onFileChange($event)">
+              <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+                  <div *ngIf="f.file.errors && f.file.errors.required">File is required.</div>
+              </div>
+          </div>
+          
+          <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px">
+              
+          <button class="btn btn-primary" type="submit">Submit</button>
+      
+      </div>
+      <!-- /.card-body -->
+
+      <!-- <div class="card-footer">
+        <button (click)="createMl()" class="btn btn-success">Create</button>
+      </div> -->
+    </form>
+  </div>
+
+</div>

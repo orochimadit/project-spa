@@ -1,0 +1,11 @@
+
+{
+    "/api": {
+      "target": "https://images.zapps.co.id/count_object",
+      "secure":false,
+      "changeOrigin": false,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
